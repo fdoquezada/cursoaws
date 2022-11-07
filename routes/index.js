@@ -7,28 +7,19 @@ router.get('/', function(req, res, next) {
   const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '',
+    password:'',
     database: 'curso',
-    port:3306
+    port: 3307
   })
   
   connection.connect(
     (err)=>{
-      if(!err){console.log("Conexion estblacida");}
+      if(!err){console.log("Conexion establecida");}
       else{console.log("Conexion fallida");}
     }
-  )
+  );
   
- 
-  
-  connection.query('SELECT * FROM tblvideos',function(err, results, fields) {
-      console.log(results);
-  });    
-  connection.end()
-
-
-
-
+ module.exports = connection;
 
 
   res.render('index', { title: 'Curso' });

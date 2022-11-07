@@ -2,21 +2,19 @@ const mysql = require('mysql')
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: '527319',
+  password:'',
   database: 'curso',
-  port :3306
-})
+  port: 3307
+});
 
-connection.connect(
-  (err)=>{
-    if(!err){console.log("Conexion estblacida");}
-    else{console.log("Conexion fallida");}
-  }
-)
+  connection.connect(
+    (err)=>{
+      if(!err){console.log("Conexion establecida");}
+      else{console.log("Conexion fallida"); }
+    }
+  );
 
+  module.exports = connection;
+   
 
-
-connection.query('SELECT * FROM tblvideos',function(err, results, fields) {
-    console.log(results);
-});    
-connection.end()
+ 
