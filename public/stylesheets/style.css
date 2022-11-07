@@ -1,15 +1,22 @@
 body {
-  padding: 50px;
+  background: #00F260;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    padding: 10px; 
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+} 
 
 a {
   color: #00B7FF;
 }
-
+nav {
+  background: rgb(34, 187, 190);
+  padding: 5px 20px;
+}
 
 footer{
-  background: #72ce5c;
+  background: #1e945d;
   padding-bottom: 0.1px;
 }
 
