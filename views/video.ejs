@@ -1,26 +1,25 @@
 <%- include layouts/header.ejs %>
-    <div class="container">
-      <h1><%= title %></h1>
-
     
-  
-          
-        <div class="row">
-         
-        <% for(var video=0;video<Videos.length;video++){ %>   
-           <div class="col-sm-4">
-             <div class="card">
-              <img height="300" src="<%=Videos[video].Imagen%>" class="card-img-top" alt="">
-                 <div class="card-body">
-                   <h5 class="card-title"><%=Videos[video].Titulo %> </h5>
-                   <p class="card-text"><%=Videos[video].comentario %></p>
-                   <a href="<%=Videos[video].referencia%>" class="btn btn-primary">Ver video</a>
-                 </div>
-               </div>
-             </div>
-          
+      <h1><%= title %></h1>
+                        
+        <% for(var video=0;video<Videos.length;video++){ %> 
+        <div class="container p-5">
+          <div class=" row align-items-center"> 
+            <div class="col col-xl-3 col-xxl-3 mb-5 mx-3">
+              <div class="card text-center" style="width: 18rem; border-radius: 22px;">
+                <div class="card-body">
+                  <img height="300" src="<%=Videos[video].Imagen%>" class="card-img-top" alt="">
+                   <div class="card-body">
+                      <h5 class="card-title"><%=Videos[video].Titulo %> </h5>
+                      <p class="card-text"><%=Videos[video].comentario %></p>
+                      <a href="<%=Videos[video].referencia%>" class="btn btn-primary">Ver video</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-  
+          </div> 
+           
         <% } %>
 
 
@@ -29,6 +28,6 @@
 
       
        
-    </div>
+    
 
 <%- include layouts/footer.ejs %>
